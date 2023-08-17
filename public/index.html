@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital App Shop</title>
     <link rel="stylesheet" href="./build/tailwind.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="bg-stone-100">
     <!-- app bar -->
@@ -22,7 +23,7 @@
         </div>
         <div class="text-lg text-slate-800 font-bold">ساعت هوشمند</div>
         <div class="bg-white flex w-8 h-8 p-1 shadow-lg justify-center items-center rounded-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 " fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
               </svg>
         </div>
@@ -31,7 +32,7 @@
     <div  class="flex justify-between items-center px-4 gap-x-4 mb-9">
         <div class="flex bg-white py-2 pr-1 rounded w-1/2">
             <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-orange-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 " class="h-6 w-6 stroke-orange-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25" />
                   </svg>
             </div>
@@ -39,7 +40,7 @@
         </div>
         <div class="flex bg-white py-2 pr-1 rounded w-1/2" >
             <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 " class="h-6 w-6 stroke-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z" />
                   </svg>
             </div>
@@ -56,11 +57,42 @@
             <!-- product description -->
             <div class="flex justify-between items-center w-full mb-3">
                 <span class="text-slate-200 text-sm md:text-base">اپل</span>
-                <div>Circles</div>
+                <div x-data="{color : 'stone-200' }" class="flex items-center">
+                    <div @click="color = 'orange-300'" :class="color === 'orange-300' ? 'ring-2 ring-orange-300':'' "  class="bg-orange-300 flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 -mr-1.5 border-2 border-white rounded-full cursor-pointer">
+                        <svg x-show="color === 'orange-300' " xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6 stroke-white " fill="none" viewBox="0 0 24 24" stroke-width="1.5" >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                          </svg>
+                          
+                    </div>
+                    <div @click="color = 'indigo-600' " :class="color === 'indigo-600' ? 'ring-2 ring-indigo-600':'' " class="bg-indigo-600 flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 -mr-1.5 border-2 border-white rounded-full cursor-pointer">
+                        <svg x-show="color === 'indigo-600' " xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6 stroke-white " fill="none" viewBox="0 0 24 24" stroke-width="1.5" >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                          </svg>
+                          
+                    </div>
+                    <div @click="color = 'yellow-400'" :class="color === 'yellow-400' ? 'ring-2 ring-yellow-400':''" class="bg-yellow-400 flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 -mr-1.5 border-2 border-white rounded-full cursor-pointer">
+                        <svg x-show="color === 'yellow-400' " xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6 stroke-white " fill="none" viewBox="0 0 24 24" stroke-width="1.5" >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                          </svg>
+                          
+                    </div>
+                    <div @click="color = 'orange-400'" :class="color === 'orange-400' ? 'ring-2 ring-orange-400' : '' " class="bg-orange-400 flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 -mr-1.5 border-2 border-white rounded-full cursor-pointer">
+                        <svg x-show="color === 'orange-400' " xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6 stroke-white " fill="none" viewBox="0 0 24 24" stroke-width="1.5" >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                          </svg>
+                          
+                    </div>
+                    <div @click="color = 'stone-200'" :class="color === 'stone-200' ? 'ring-2 ring-stone-200' : '' " class="bg-stone-200 w flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 -mr-1.5 border-2 border-white rounded-full cursor-pointer">
+                        <svg x-show="color === 'stone-200' " xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6 stroke-white " fill="none" viewBox="0 0 24 24" stroke-width="1.5" >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                          </svg>
+                          
+                    </div>
+                </div>
             </div>
             <!-- product title  -->
-            <div class="text-slate-900 text-sm font-bold mb-2 md:text-base">ساعت هوشمند اپل سری 6</div>
-            <div class="text-orange-700 text-sm font-semibold text-center mb-2">48,250,000</div>
+            <div class="text-slate-900 text-sm font-bold mb-2 sm:text-lg md:text-base">ساعت هوشمند اپل سری 6</div>
+            <div class="text-orange-700 text-sm font-semibold text-center sm:text-lg mb-2">48,250,000</div>
             <hr />
             <button class="text-orange-400 w-full py-1 font-bold md:text-lg">مشاهده و سفارش</button>
         </div>
