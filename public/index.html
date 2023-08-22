@@ -50,7 +50,7 @@
     <!-- content -->
     <div class="grid grid-cols-12 md:grid-rows-[55px_minmax(500px,_1fr)] md:gap-y-6 md:gap-x-2">
         <!-- sidebar -->
-        <div class="hidden md:block col-span-3 row-span-2 md:px-2">
+        <div class="hidden md:block col-span-3 md:col-span-4 lg:col-span-3 row-span-2 md:px-2">
             <div class="bg-white p-5 rounded-xl mr-4">
                 
                 <div class="mb-7">
@@ -86,7 +86,7 @@
                 <div>
                     <div class="text-xl font-bold text-orange-500 mb-5">فیلتر</div>
                     <!-- Accordion No.1 -->
-                    <div x-data="{isOpenBrand : true}">
+                    <div x-data="{isOpenBrand : true}" class="mb4">
                         <!-- Acc#1 header  -->
                         <div @click="isOpenBrand = !isOpenBrand" class="flex items-center justify-between hover:bg-gray-50 rounded-lg w-full p-2 cursor-pointer mb-4">
                             <div class="flex items-center">
@@ -100,25 +100,25 @@
                         <!-- Acc#1 Content  -->
                         <div x-show="isOpenBrand === true" class="px-2 flex flex-col gap-y-2">
                             <label for="apple" class="py-1 flex items-center cursor-pointer">
-                                <input type="checkbox" class="form-checkbox rounded" />
+                                <input type="checkbox" class="form-checkbox rounded text-orange-500 focus:ring-orange-500" />
                                 <span class="mr-2">اپل</span>
                             </label>
                             <label for="apple" class="py-1 flex items-center cursor-pointer">
-                                <input type="checkbox" class="form-checkbox rounded" />
+                                <input type="checkbox" class="form-checkbox rounded text-orange-500 focus:ring-orange-500" />
                                 <span class="mr-2">سامسونگ</span>
                             </label>
                             <label for="apple" class="py-1 flex items-center cursor-pointer">
-                                <input type="checkbox" class="form-checkbox rounded" />
+                                <input type="checkbox" class="form-checkbox rounded text-orange-500 focus:ring-orange-500" />
                                 <span class="mr-2">شیائومی</span>
                             </label>
                             <label for="apple" class="py-1 flex items-center cursor-pointer">
-                                <input type="checkbox" class="form-checkbox rounded" />
+                                <input type="checkbox" class="form-checkbox rounded text-orange-500 focus:ring-orange-500" />
                                 <span class="mr-2">هواوی</span>
                             </label>
                         </div>
                     </div>
                     <!-- Accordion No.2 -->
-                    <div x-data="{isOpenColor : true}">
+                    <div x-data="{isOpenColor : true}" class="mb4">
                         <!-- Acc#2 header  -->
                         <div @click="isOpenColor = !isOpenColor" class="flex items-center justify-between hover:bg-gray-50 rounded-lg w-full p-2 cursor-pointer mb-4">
                             <div class="flex items-center">
@@ -132,28 +132,28 @@
                         <!-- Acc#2 Content  -->
                         <div x-show="isOpenColor === true" class="px-2 flex flex-col gap-y-2">
                             <label for="blue" class="py-1 flex items-center cursor-pointer">
-                                <input type="checkbox" class="form-checkbox rounded" />
+                                <input type="checkbox" class="form-checkbox rounded text-orange-500 focus:ring-orange-500" />
                                 <span class="mr-2">آبی</span>
                             </label>
                             <label for="red" class="py-1 flex items-center cursor-pointer">
-                                <input type="checkbox" class="form-checkbox rounded" />
+                                <input type="checkbox" class="form-checkbox rounded text-orange-500 focus:ring-orange-500" />
                                 <span class="mr-2">قرمز</span>
                             </label>
                             <label for="yellow" class="py-1 flex items-center cursor-pointer">
-                                <input type="checkbox" class="form-checkbox rounded" />
+                                <input type="checkbox" class="form-checkbox rounded text-orange-500 focus:ring-orange-500" />
                                 <span class="mr-2">زرد</span>
                             </label>
                             <label for="green" class="py-1 flex items-center cursor-pointer">
-                                <input type="checkbox" class="form-checkbox rounded" />
+                                <input type="checkbox" class="form-checkbox rounded text-orange-500 focus:ring-orange-500" />
                                 <span class="mr-2">سبز</span>
                             </label>
                         </div>
                     </div>
                     <!-- Accordion No.3 -->
-                    <div x-data="{isOpenPrice : true}">
+                    <div x-data="{isOpenPrice : true}" class="mb4">
                         <!-- Acc#3 header  -->
                         <div @click="isOpenPrice = !isOpenPrice" class="flex items-center justify-between hover:bg-gray-50 rounded-lg w-full p-2 cursor-pointer mb-4">
-                            <div class="flex items-center">
+                            <div class="flex items-center mb-5">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" fill="none"><circle cx="10.5" cy="9.5" r="9.5" fill="#AFAFAF" fill-opacity=".29"/><path fill="#222F5D" d="M12.833 21.271H1.167a.44.44 0 0 1-.438-.438.44.44 0 0 1 .438-.437h11.666a.44.44 0 0 1 .438.438.44.44 0 0 1-.438.437Z"/><path fill="#222F5D" d="M2.158 20.833h-.875l.03-7.017c0-.496.227-.957.618-1.26l4.083-3.18a1.61 1.61 0 0 1 1.972 0l4.083 3.174c.385.303.619.776.619 1.266v7.017h-.875v-7.012a.747.747 0 0 0-.28-.577L7.449 10.07a.735.735 0 0 0-.898 0L2.468 13.25a.727.727 0 0 0-.28.571l-.03 7.012Z"/><path fill="#222F5D" d="M9.917 21.27H4.083a.44.44 0 0 1-.437-.437v-5.541c0-.724.589-1.313 1.312-1.313h4.084c.723 0 1.312.59 1.312 1.313v5.541a.44.44 0 0 1-.437.438Zm-5.396-.874h4.958V15.29a.44.44 0 0 0-.437-.437H4.958a.44.44 0 0 0-.437.438v5.104Z"/><path fill="#222F5D" d="M5.833 18.791a.44.44 0 0 1-.437-.437v-.875a.44.44 0 0 1 .437-.438.44.44 0 0 1 .438.438v.875a.44.44 0 0 1-.438.438ZM7.875 12.813h-1.75a.44.44 0 0 1-.438-.438.44.44 0 0 1 .438-.438h1.75a.44.44 0 0 1 .438.438.44.44 0 0 1-.438.438Z"/></svg>
                                 <span class="mr-3">محدوده قیمت</span>
                             </div>
@@ -163,45 +163,60 @@
                         </div>
                         <!-- Acc#3 Content  -->
                         <div x-show="isOpenPrice === true" class="px-2 flex flex-col gap-y-2 w-full">
-                            <input type="range" min="2000000" max="40000000" value="50" id="slider" class="w-full h-6 bg-gray-200 outline-none opacity-50 ">
-                            <div class="flex justify-between items-center">
-                                <p>2,000,000</p>
-                                <span class=" text-orange-500 border-2 rounded-md border-orange-500" id="demo"></span>
-                                <p>40,000,000</p>
-                            </div>
+                            <div class="flex w-full  items-center justify-center">
+                                <div class="py-1 relative min-w-full">
+                                    <div class="h-2 bg-gray-200 rounded-full">
+                                        <div class="absolute h-2 rounded-full bg-teal-600 w-0" style="width: 58.5714%;"></div>
+                                        <div class="absolute h-4 flex items-center justify-center w-4 rounded-full bg-white shadow border border-gray-300 -ml-2 top-0 cursor-pointer" unselectable="on" onselectstart="return false;" style="left: 58.5714%;">
+                                            <div class="relative -mt-2 w-1">
+                                                <div class="absolute z-40 opacity-100 bottom-100 mb-2 left-0 min-w-full" style="margin-left: -20.5px;">
+                                                    <div class="relative shadow-md">
+                                                        <div class="bg-blue-950 -mt-8 text-white  truncate text-xs rounded py-1 px-4">25,000,000</div>
+                                                        <svg class="absolute text-black w-full h-2 left-0 top-100" x="0px" y="0px" viewBox="0 0 255 255" xml:space="preserve">
+                                                            <polygon class="fill-current" points="0,0 127.5,127.5 255,0"></polygon>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="absolute text-gray-800 -ml-1 bottom-0 left-0 -mb-6">2,000,000</div>
+                                        <div class="absolute text-gray-800 -mr-1 bottom-0 right-0 -mb-6">40,000,000</div>
+                                    </div>
+                                </div>
+                            </div>         
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- sort section  -->
-        <div class="hidden md:block col-span-9 mx-4 ">
+        <div class="hidden md:block col-span-9 md:col-span-8 lg:col-span-9 mx-4 ">
            <div x-data="{sort : 1 , activeClass : 'font-bold text-slate-800' }" class="bg-white px-4 flex items-center gap-x-4 text-gray-400 rounded-lg ">
             <div class="bg-orange-100 p-1 rounded-md flex justify-center items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 stroke-orange-500" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25" />
                   </svg>                  
             </div>
-            <button @click="sort = 1" :class="sort === 1 ? activeClass : '' " class="py-4 md:text-[12px] lg:text-base relative">
-                <span>محبوب ترین محصول</span>
+            <button @click="sort = 1" :class="sort === 1 ? activeClass : '' " class="py-4 relative">
+                <span>محبوب ترین </span>
                 <span x-show="sort === 1" class="w-2 h-2 bg-orange-400 rounded-full absolute -left-2 top-1"></span>
             </button>
-            <button @click="sort = 2" :class="sort === 2 ? activeClass : '' " class="py-4 md:text-[12px] lg:text-base relative">
-                <span>پر بازدید ترین محصول</span>
+            <button @click="sort = 2" :class="sort === 2 ? activeClass : '' " class="py-4 relative">
+                <span>پر بازدید ترین </span>
                 <span x-show="sort === 2" class="w-2 h-2 bg-orange-400 rounded-full absolute -left-2 top-1"></span>
             </button>
-            <button @click="sort = 3" :class="sort === 3 ? activeClass : '' " class="py-4 md:text-[12px] lg:text-base relative">
-                <span>گران ترین محصول</span>
+            <button @click="sort = 3" :class="sort === 3 ? activeClass : '' " class="py-4 relative">
+                <span>گران ترین </span>
                 <span x-show="sort === 3" class="w-2 h-2 bg-orange-400 rounded-full absolute -left-2 top-1"></span>
             </button>
-            <button @click="sort = 4" :class="sort === 4 ? activeClass : '' " class="py-4 md:text-[12px] lg:text-base relative">
-                <span>ارزان ترین محصول</span>
+            <button @click="sort = 4" :class="sort === 4 ? activeClass : '' " class="py-4 relative">
+                <span>ارزان ترین </span>
                 <span x-show="sort === 4" class="w-2 h-2 bg-orange-400 rounded-full absolute -left-2 top-1"></span>
             </button>
            </div> 
         </div>
         <!-- products section -->
-        <div class="col-span-12 md:col-span-9 md:px-4">
+        <div class="col-span-12 md:col-span-8 lg:col-span-9 md:px-4">
             <div x-data="{
                 products : [
                 {id : 1 ,title : 'ساعت هوشمند اپل سری 1', price : '12,250,000' },
