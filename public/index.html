@@ -47,6 +47,30 @@
             <span class="text-sm font-medium text-slate-800 mr-3">فیلتر: برند اپل</span>
         </div>
     </div>
+    <!-- desktop Navbar  -->
+    <nav class="flex items-center justify-between bg-white p-4 shadow-lg z-10 sticky top-0 mb-5">
+        <div class="flex items-center justify-between">
+            <span class="text-orange-400 text-2xl font-extrabold stre">دیجی</span>
+            <span class="text-slate-800 text-2xl font-extrabold stre">شاپ</span>  
+            <ul class="flex items-center gap-x-4 text-slate-800 text-lg pr-4">
+                <li><a href="#" class="block px-4 py-2 font-semibold hover:bg-gray-100 transition-all duration-500 rounded-md">خانه</a></li>
+                <li><a href="#" class="block px-4 py-2 font-semibold hover:bg-gray-100 transition-all duration-500 rounded-md">تلفن همراه</a><li>
+                <li><a href="#" class="block px-4 py-2 font-semibold hover:bg-gray-100 transition-all duration-500 rounded-md">لپ تاپ</a></li>
+                <li><a href="#" class="block px-4 py-2 font-semibold hover:bg-gray-100 transition-all duration-500 rounded-md">ساعت هوشمند</a></li>
+            </ul>
+        </div>
+        <!-- search bar -->
+        <div class="flex-1 max-w-xl">
+            <div class="flex items-center bg-gray-100 rounded-lg p-1">
+                <span class="mr-1 ml-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                      </svg>
+                </span>
+                <input type="text" placeholder="جستجوی نام محصول،نام برند،نام مدل و..." class="focus:outline-none w-full bg-transparent p-2 text-slate-800 border-none">
+            </div>
+        </div>
+    </nav>
     <!-- content -->
     <div class="grid grid-cols-12 md:grid-rows-[55px_minmax(500px,_1fr)] md:gap-y-6 md:gap-x-2">
         <!-- sidebar -->
@@ -122,7 +146,7 @@
                         <!-- Acc#2 header  -->
                         <div @click="isOpenColor = !isOpenColor" class="flex items-center justify-between hover:bg-gray-50 rounded-lg w-full p-2 cursor-pointer mb-4">
                             <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" fill="none"><circle cx="10.5" cy="9.5" r="9.5" fill="#AFAFAF" fill-opacity=".29"/><path fill="#222F5D" d="M12.833 21.271H1.167a.44.44 0 0 1-.438-.438.44.44 0 0 1 .438-.437h11.666a.44.44 0 0 1 .438.438.44.44 0 0 1-.438.437Z"/><path fill="#222F5D" d="M2.158 20.833h-.875l.03-7.017c0-.496.227-.957.618-1.26l4.083-3.18a1.61 1.61 0 0 1 1.972 0l4.083 3.174c.385.303.619.776.619 1.266v7.017h-.875v-7.012a.747.747 0 0 0-.28-.577L7.449 10.07a.735.735 0 0 0-.898 0L2.468 13.25a.727.727 0 0 0-.28.571l-.03 7.012Z"/><path fill="#222F5D" d="M9.917 21.27H4.083a.44.44 0 0 1-.437-.437v-5.541c0-.724.589-1.313 1.312-1.313h4.084c.723 0 1.312.59 1.312 1.313v5.541a.44.44 0 0 1-.437.438Zm-5.396-.874h4.958V15.29a.44.44 0 0 0-.437-.437H4.958a.44.44 0 0 0-.437.438v5.104Z"/><path fill="#222F5D" d="M5.833 18.791a.44.44 0 0 1-.437-.437v-.875a.44.44 0 0 1 .437-.438.44.44 0 0 1 .438.438v.875a.44.44 0 0 1-.438.438ZM7.875 12.813h-1.75a.44.44 0 0 1-.438-.438.44.44 0 0 1 .438-.438h1.75a.44.44 0 0 1 .438.438.44.44 0 0 1-.438.438Z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="21" fill="none"><path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width=".875" d="M5.833 9.625V17.5c0 .63-.256 1.208-.665 1.628l-.023.023a1.83 1.83 0 0 1-.163.146 2.041 2.041 0 0 1-.578.35c-.064.03-.128.053-.192.076-.228.076-.473.11-.712.11a2.48 2.48 0 0 1-.467-.046c-.075-.017-.151-.035-.227-.058a2.117 2.117 0 0 1-.268-.1c0-.005 0-.005-.006 0a2.946 2.946 0 0 1-.467-.285l-.006-.006a1.598 1.598 0 0 1-.21-.187c-.064-.07-.128-.14-.192-.216a2.94 2.94 0 0 1-.286-.466c.006-.006.006-.006 0-.006 0 0 0-.006-.006-.012-.035-.082-.064-.169-.093-.256-.024-.076-.041-.152-.059-.228a2.483 2.483 0 0 1-.046-.467V9.625c0-.875.583-1.458 1.458-1.458h1.75c.875 0 1.458.583 1.458 1.458Z"/><path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width=".875" d="M12.833 16.625v1.75c0 .875-.583 1.459-1.458 1.459H3.5c.24 0 .484-.035.712-.111.064-.023.128-.047.192-.076.204-.082.403-.198.578-.35.052-.04.11-.093.163-.146l.023-.023 3.967-3.961h2.24c.875 0 1.458.583 1.458 1.458ZM2.806 19.729a2.237 2.237 0 0 1-.957-.578 2.237 2.237 0 0 1-.577-.957c.227.73.805 1.307 1.534 1.535Z"/><path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width=".875" d="m10.716 13.586-1.581 1.58-3.967 3.961c.409-.42.665-.997.665-1.627v-5.635l1.581-1.58c.618-.62 1.447-.62 2.065 0l1.237 1.236c.618.618.618 1.446 0 2.065ZM3.5 18.084a.583.583 0 1 0 0-1.167.583.583 0 0 0 0 1.167Z"/><circle cx="9.5" cy="9.5" r="9.5" fill="#AFAFAF" fill-opacity=".29"/></svg>
                                 <span class="mr-3">رنگ محصول</span>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" :class="isOpenColor ? 'rotate-180' : '' " class="w-5 h-5 stroke-currentcolor transition-all duration-500" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
@@ -154,7 +178,7 @@
                         <!-- Acc#3 header  -->
                         <div @click="isOpenPrice = !isOpenPrice" class="flex items-center justify-between hover:bg-gray-50 rounded-lg w-full p-2 cursor-pointer mb-4">
                             <div class="flex items-center mb-5">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" fill="none"><circle cx="10.5" cy="9.5" r="9.5" fill="#AFAFAF" fill-opacity=".29"/><path fill="#222F5D" d="M12.833 21.271H1.167a.44.44 0 0 1-.438-.438.44.44 0 0 1 .438-.437h11.666a.44.44 0 0 1 .438.438.44.44 0 0 1-.438.437Z"/><path fill="#222F5D" d="M2.158 20.833h-.875l.03-7.017c0-.496.227-.957.618-1.26l4.083-3.18a1.61 1.61 0 0 1 1.972 0l4.083 3.174c.385.303.619.776.619 1.266v7.017h-.875v-7.012a.747.747 0 0 0-.28-.577L7.449 10.07a.735.735 0 0 0-.898 0L2.468 13.25a.727.727 0 0 0-.28.571l-.03 7.012Z"/><path fill="#222F5D" d="M9.917 21.27H4.083a.44.44 0 0 1-.437-.437v-5.541c0-.724.589-1.313 1.312-1.313h4.084c.723 0 1.312.59 1.312 1.313v5.541a.44.44 0 0 1-.437.438Zm-5.396-.874h4.958V15.29a.44.44 0 0 0-.437-.437H4.958a.44.44 0 0 0-.437.438v5.104Z"/><path fill="#222F5D" d="M5.833 18.791a.44.44 0 0 1-.437-.437v-.875a.44.44 0 0 1 .437-.438.44.44 0 0 1 .438.438v.875a.44.44 0 0 1-.438.438ZM7.875 12.813h-1.75a.44.44 0 0 1-.438-.438.44.44 0 0 1 .438-.438h1.75a.44.44 0 0 1 .438.438.44.44 0 0 1-.438.438Z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none"><path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width=".875" d="M10.523 14.905c-.245.239-.385.583-.35.95.053.63.63 1.091 1.26 1.091h1.109v.695a2.198 2.198 0 0 1-2.194 2.193H3.652a2.198 2.198 0 0 1-2.194-2.193v-3.926c0-1.208.986-2.194 2.194-2.194h6.696c1.208 0 2.194.986 2.194 2.194v.84h-1.179c-.326 0-.624.128-.84.35Z"/><path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width=".875" d="M1.458 14.24v-2.667c0-.694.426-1.312 1.074-1.557l4.631-1.75c.724-.274 1.5.262 1.5 1.038v2.217M13.16 15.15v1.201c0 .321-.257.584-.584.595h-1.143c-.63 0-1.208-.46-1.26-1.09a1.171 1.171 0 0 1 .35-.951c.216-.222.513-.35.84-.35h1.213a.599.599 0 0 1 .583.595ZM4.083 14h4.084"/><circle cx="11.5" cy="9.5" r="9.5" fill="#AFAFAF" fill-opacity=".29"/></svg>
                                 <span class="mr-3">محدوده قیمت</span>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" :class="isOpenPrice ? 'rotate-180' : '' " class="w-5 h-5 stroke-currentcolor transition-all duration-500" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
